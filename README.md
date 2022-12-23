@@ -33,7 +33,7 @@ This package assumes that you have an existing dbt project with a BigQuery profi
 ```yaml
 vars:
     raw_projectid: "your_gcp_project"
-    raw_dataset: "your_amazon_ads_dataset"
+    raw_dataset: "your_klaviyo_dataset"
 ```
 ## Schema Change
 
