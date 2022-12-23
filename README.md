@@ -57,7 +57,7 @@ vars:
     timezone_conversion_hours: 7
     geo_consolidation_flag: False
     geo_name_position: 0
-    geo_name:'Canada'
+    geo_name:"Canada"
     table_partition_flag: False
 ```
 
@@ -87,26 +87,34 @@ The klaviyo tables that are being generated as part of this package are enabled 
 
 ## Models
 
-This package contains models from the Klaviyo API which includes Events, Campaigns, flows data. Please follow this to get more details about [models](https://docs.google.com/spreadsheets/d/1OaJnVpBrPZaBusJXBHrT8dhnD2zctWMmSRN__WLQsl0/edit?usp=sharing). The primary outputs of this package are described below.
+This package contains models from the Klaviyo API which includes Events, Campaigns, flows data. Please follow this to get more details about [models](https://docs.google.com/spreadsheets/d/1ZPEGUPi9QZSM6PSBSr6PywSqedmzETGnoig2gPiX1sg/edit?usp=sharing). The primary outputs of this package are described below.
 
-| **Category**                 | **Model**  | **Description** |
-| ------------------------- | ---------------| ----------------------- |
-|Sponsored Brands | [SB_Portfolio](models/Amazon%20Ads/Sponsored%20Brands/SB_Portfolio.sql)  | A list of portfolios associated with the account |
-|Sponsored Brands | [SB_Campaign](models/Amazon%20Ads/Sponsored%20Brands/SB_Campaign.sql)  | A list of campaigns associated with the account |
-|Sponsored Brands | [SB_AdGroupsReport](models/Amazon%20Ads/Sponsored%20Brands/SB_AdGroupsReport.sql)  | A list of ad groups associated with the account |
-|Sponsored Brands | [SB_AdGroupsVideoReport](models/Amazon%20Ads/Sponsored%20Brands/SB_AdGroupsVideoReport.sql)| A list of ad groups related to sponsored brand video associated with the account |
-|Sponsored Brands | [SB_PlacementCampaignsReport](models/Amazon%20Ads/Sponsored%20Brands/SB_PlacementCampaignsReport.sql)| A list of all the placement campaigns associated with the account |
-|Sponsored Brands | [SB_SearchTermKeywordsReport](models/Amazon%20Ads/Sponsored%20Brands/SB_SearchTermKeywordsReport.sql)| A list of product search keywords report |
-|Sponsored Brands | [SB_SearchTermKeywordsVideoReport](models/Amazon%20Ads/Sponsored%20Brands/SB_SearchTermKeywordsVideoReport.sql)| A list of keywords associated with sponsored brand video |
-|Sponsored Display | [SD_Portfolio](models/Amazon%20Ads/Sponsored%20Display/SD_Portfolio.sql)| A list of portfolios associated with the account |
-|Sponsored Display | [SD_Campaign](models/Amazon%20Ads/Sponsored%20Display/SD_Campaign.sql)| A list of campaigns associated with the account |
-|Sponsored Display | [SD_ProductAdsReport](models/Amazon%20Ads/Sponsored%20Display/SD_ProductAdsReport.sql)| A list of product ads associated with the account |
-|Sponsored Products | [SP_Portfolio](models/Amazon%20Ads/Sponsored%20Products/SP_Portfolio.sql)| A list of portfolios associated with the account |
-|Sponsored Products | [SP_Campaign](models/Amazon%20Ads/Sponsored%20Products/SP_Campaign.sql)| A list of campaigns associated with the account |
-|Sponsored Products | [SP_PlacementCampaignsReport](models/Amazon%20Ads/Sponsored%20Products/SP_PlacementCampaignsReport.sql)| A list of all the placement campaigns associated with the account |
-|Sponsored Products | [SP_ProductAdsReport](models/Amazon%20Ads/Sponsored%20Products/SP_ProductAdsReport.sql)| A list of product ads associated with the account |
-|Sponsored Products | [SP_SearchTermKeywordReport](models/Amazon%20Ads/Sponsored%20Products/SP_SearchTermKeywordReport.sql)| A list of product search keywords report |
-
+| **Model**  | **Description** |
+|---------------| ----------------------- |
+|[Bounced_Email](models/Klaviyo/klaviyo_bounced_email.sql)  | Details of bounced email events |
+|[Clicked_Email](models/Klaviyo/klaviyo_clicked_email.sql)  | Details of clicked email events |
+|[Clicked_SMS](models/Klaviyo/klaviyo_clicked_sms.sql)  | Details of clicked sms events |
+|[Consented_To_Receive_SMS](models/klaviyo/Klaviyo_consented_to_receive_sms.sql)| Details of events in which customers give permission to receive sms |
+|[Dropped_Email](models/Klaviyo/klaviyo_dropped_email.sql)| Details of events in which emails were getting dropped |
+|[Failed_To_Deliver_SMS](models/klaviyo/Klaviyo_failed_to_deliver_sms.sql)| Details of events in which sms were failed to get delivered to customers |
+|[Flow_Actions](models/Klaviyo/klaviyo_flow_actions.sql)| A list of actions related to flow|
+|[Flow_Messages](models/Klaviyo/klaviyo_flow_messages.sql)| Details of messages sent associated with the flows |
+|[Flows](models/Klaviyo/klaviyo_flows.sql)| list of the flows associated with the account |
+|[Lists](models/Klaviyo/klaviyo_lists.sql)| Details of the lists associated with the account |
+|[Marked_Email_As_Spam](models/Klaviyo/klaviyo_marked_email_as_spam.sql)| Details of the events in which emails are marked as spam |
+|[Metrics](models/Klaviyo/klaviyo_metrics.sql)| A list of metrics associated with the account |
+|[Opened_Email](models/Klaviyo/klaviyo_opened_email.sql)| Details of the opened email events |
+|[Opened_Push](models/Klaviyo/klaviyo_opened_push.sql)| Details of the pushed email events|
+|[Placed_Order_Extra_Attributes](models/Klaviyo/klaviyo_placed_order_attributes_event_properties_extra.sql)| Additional Details of the placed orders events  |
+|[Placed_Order](models/Klaviyo/klaviyo_placed_order.sql)|  Details of the orders placed events
+|[Received_Email](models/Klaviyo/klaviyo_received_email.sql)| Details of the received email events |
+|[Received_Push](models/Klaviyo/klaviyo_received_push.sql)| Detais of the received push event |
+|[Received_SMS](models/Klaviyo/klaviyo_received_sms.sql)| Details of the sms which were received |
+|[Segments](models/Klaviyo/klaviyo_segments.sql)| A list of segments associated with the account |
+|[Sent_SMS](models/Klaviyo/klaviyo_sent_sms.sql)| Details of the sms which were sent |
+|[Subscribed_To_List](models/Klaviyo/klaviyo_subscribed_to_list.sql)| Details of events in which customers subscribed to list |
+|[Unsubscribed_from_list](models/Klaviyo/klaviyo_unsubscribed_from_list.sql)| Details of events in which customers unsubscribed from list |
+|[Unsubscribed](models/Klaviyo/klaviyo_unsubscribed.sql)| Details of events in which emails were unsubscribed |
 ## Resources:
 - Have questions, feedback, or need [help](https://calendly.com/priyanka-vankadaru/30min)? Schedule a call with our data experts or email us at info@sarasanalytics.com.
 - Learn more about Daton [here](https://sarasanalytics.com/daton/).
